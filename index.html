@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agha Abdul Moiz · AI Automation Engineer</title>
+<meta name="description" content="AI automation and quality engineer: production AI browser agents, self-testing QA systems, test architecture and client-facing delivery. Open to remote roles worldwide.">
+<meta property="og:title" content="Agha Abdul Moiz · AI Automation Engineer">
+<meta property="og:description" content="Production AI browser agents, self-testing QA systems and test architecture. Nine years in software.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/pitchlyy-home.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232343c9'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column with a label rail; hero pairs the thesis with a verification ledger, the motif of the work. */
+:root {
+  --bg: #f2f4f7; --surface: #ffffff; --ink: #111a2e; --muted: #55607a; --line: #d5dae4;
+  --accent: #2343c9; --accent-soft: #e4e9fb; --pass: #1c7a52; --fail: #b3401f; --frame: #e6e9f0;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0e1320; --surface: #161d2e; --ink: #e9edf6; --muted: #9aa5bd; --line: #2a3349;
+    --accent: #93a6ff; --accent-soft: #1d2747; --pass: #5fc797; --fail: #f0916f; --frame: #222b40; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1100px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--surface); padding: 8px 12px; border-radius: 6px; }
+.skip:focus { left: 12px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.1; }
+p { margin: 0; }
+ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.label { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+.top { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center; padding-block: 20px; border-bottom: 1px solid var(--line); }
+.top .name { font-family: var(--display); font-weight: 700; font-size: 18px; }
+.top nav { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; align-items: center; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a:hover { color: var(--accent); }
+.btn { display: inline-block; font: 600 15px var(--body); text-decoration: none; padding: 9px 16px; border-radius: 8px; }
+.btn.primary { background: var(--accent); color: var(--surface); }
+.btn.ghost { border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+.top nav .btn.primary { color: var(--surface); }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 48px; align-items: center; padding-block: 60px 52px; }
+.hero h1 { font-size: clamp(38px, 6vw, 62px); font-weight: 700; letter-spacing: -0.02em; margin-top: 14px; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .lede { margin-top: 22px; font-size: 19px; color: var(--muted); max-width: 34em; }
+.hero .avail { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+.hero .cta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { font-family: var(--mono); font-size: 12.5px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: var(--surface); }
+.ledger { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; min-width: 0; }
+.ledger header { display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.ledger .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 14px; padding: 13px 16px; border-bottom: 1px solid var(--line); }
+.ledger .row:last-of-type { border-bottom: 0; }
+.ledger .field { font-weight: 600; font-size: 15.5px; }
+.ledger .check { grid-column: 1; font-size: 14.5px; color: var(--muted); }
+.ledger .res { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-family: var(--mono); font-size: 12.5px; padding: 3px 9px; border-radius: 4px; white-space: nowrap; }
+.res.caught { color: var(--fail); border: 1px solid var(--fail); }
+.res.ok { color: var(--pass); border: 1px solid var(--pass); }
+.ledger footer { padding: 11px 16px; font-size: 13.5px; color: var(--muted); border-top: 1px solid var(--line); background: var(--bg); }
+
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); border-block: 1px solid var(--line); }
+.figures div { padding: 22px 18px 20px 0; }
+.figures b { display: block; font-family: var(--display); font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+.figures span { display: block; margin-top: 8px; font-size: 14.5px; color: var(--muted); max-width: 16em; }
+
+section { padding-block: 64px 8px; }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -0.015em; }
+.sec-head p { color: var(--muted); max-width: 42em; }
+
+.expertise { display: flex; flex-wrap: wrap; gap: 8px; }
+.expertise span { font-size: 14.5px; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+
+.case { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 12px 40px; padding-block: 30px; border-top: 1px solid var(--line); }
+.case .meta { display: grid; gap: 6px; align-content: start; }
+.case .meta .who { font-family: var(--display); font-weight: 700; font-size: 21px; }
+.case .meta .role { font-size: 15px; }
+.case .meta .when { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.case .meta .kind { font-family: var(--mono); font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.case .body { display: grid; gap: 14px; min-width: 0; }
+.case h3 { font-size: 23px; font-weight: 700; }
+.case .body p { max-width: 44em; }
+.case ul { max-width: 46em; }
+.stack { display: flex; flex-wrap: wrap; gap: 6px; }
+.stack span { font-family: var(--mono); font-size: 12px; padding: 3px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--ink); }
+
+.principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px 40px; }
+.principles h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.principles p { color: var(--muted); font-size: 16px; }
+
+.product { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: center; padding-block: 28px; border-top: 1px solid var(--line); }
+.product:nth-of-type(even) .shot { order: 2; }
+.shot { background: var(--frame); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; min-width: 0; box-shadow: 0 12px 30px -18px rgba(17, 26, 46, 0.45); }
+.shot .bar { display: flex; align-items: center; gap: 6px; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+.shot .bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); display: block; }
+.shot .bar span { margin-left: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.product .text { display: grid; gap: 12px; min-width: 0; }
+.product h3 { font-size: 26px; font-weight: 700; }
+.product .state { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.mini { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; padding-top: 28px; border-top: 1px solid var(--line); }
+.mini .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+.mini h3 { font-size: 21px; font-weight: 700; }
+
+.bench { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; display: grid; gap: 16px; }
+.bars { display: grid; gap: 12px; }
+.bars .b { display: grid; grid-template-columns: 170px minmax(0, 1fr) 70px; gap: 12px; align-items: center; font-size: 15px; }
+.bars .track { height: 14px; background: var(--bg); border-radius: 7px; overflow: hidden; border: 1px solid var(--line); }
+.bars .fill { height: 100%; background: var(--accent); border-radius: 7px; }
+.bars .v { font-family: var(--mono); font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; }
+.bench small { color: var(--muted); font-size: 13.5px; }
+
+.timeline .t { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 4px 40px; padding-block: 14px; border-top: 1px solid var(--line); }
+.timeline .t .when { font-family: var(--mono); font-size: 13px; color: var(--muted); padding-top: 3px; }
+.timeline .t b { font-weight: 600; }
+.timeline .t span { color: var(--muted); }
+
+.contact { margin-top: 64px; background: var(--ink); color: var(--bg); }
+.contact .wrap { padding-block: 56px; display: grid; gap: 22px; }
+.contact h2 { font-size: clamp(28px, 4.4vw, 44px); font-weight: 700; max-width: 16em; }
+.contact .rows { display: grid; gap: 10px; font-size: 17px; }
+.contact .rows div { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+.contact .k { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; min-width: 84px; }
+.contact a { color: var(--bg); }
+.contact .v { overflow-wrap: anywhere; }
+.copy { font: 500 13px var(--mono); color: var(--bg); background: transparent; border: 1px solid currentColor; border-radius: 4px; padding: 4px 10px; cursor: pointer; }
+.copy:hover { background: var(--bg); color: var(--ink); }
+.foot { padding-block: 20px; font-size: 13px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .hero, .product { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .product:nth-of-type(even) .shot { order: 0; }
+  .hero { padding-block: 40px; }
+  .case, .timeline .t { grid-template-columns: minmax(0, 1fr); }
+  .bars .b { grid-template-columns: minmax(0, 1fr) 60px; }
+  .bars .b .track { grid-column: 1 / -1; grid-row: 2; }
+  section { padding-block: 48px 4px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="wrap">
+  <header class="top">
+    <span class="name">Agha Abdul Moiz</span>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#products">Products</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#history">History</a>
+      <a class="btn primary" href="Agha_Abdul_Moiz_Resume.pdf">Résumé (PDF)</a>
+    </nav>
+  </header>
+</div>
+
+<main id="main">
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <p class="label">AI Automation Engineer · Senior QA Automation · Agentic Testing</p>
+      <h1>I build automation that <em>checks its own work.</em></h1>
+      <p class="lede">Nine years in software, eight of them in quality and automation. I design QA architecture, build AI agents that test and report on their own, ship browser agents that complete real insurance quotes, and present the work to clients myself.</p>
+      <div class="avail">
+        <span class="chip">Available now</span>
+        <span class="chip">Remote, any time zone</span>
+        <span class="chip">Open to relocation</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#work">See the work</a>
+        <a class="btn ghost" href="Agha_Abdul_Moiz_Resume.pdf">Download résumé</a>
+      </div>
+    </div>
+    <div class="ledger" role="group" aria-label="Examples of checks from production work">
+      <header><span>quote verification</span><span>from production, 2026</span></header>
+      <div class="row"><span class="field">Policy term</span><span class="res caught">caught</span><span class="check">Requested 6 months, portal rated 12. The premium would have doubled.</span></div>
+      <div class="row"><span class="field">Coverage</span><span class="res caught">caught</span><span class="check">Read back correctly, submitted blank. Found by capturing the network request.</span></div>
+      <div class="row"><span class="field">Paid reports</span><span class="res caught">caught</span><span class="check">Ordered without the agency's permission at three carriers. Now checked per report.</span></div>
+      <div class="row"><span class="field">Every other field</span><span class="res ok">verified</span><span class="check">Read back from the page and compared with the request before a quote counts.</span></div>
+      <footer>The rule behind all my work: nothing counts until it has been checked against the source.</footer>
+    </div>
+  </div>
+
+  <div class="figures">
+    <div><b>1,848</b><span>commits on production AI quoting agents at RefocusAI</span></div>
+    <div><b>15+</b><span>insurance carrier portals automated end to end</span></div>
+    <div><b>1,594</b><span>automated tests built from an empty repository at Qureos</span></div>
+    <div><b>685</b><span>bugs filed in four and a half months, mostly by AI agents and automated suites</span></div>
+    <div><b>~500</b><span>learners in each of four AI automation cohorts</span></div>
+  </div>
+
+  <section id="expertise" aria-labelledby="exp-h">
+    <div class="sec-head">
+      <p class="label">Core expertise</p>
+      <h2 id="exp-h">What I do</h2>
+    </div>
+    <div class="expertise">
+      <span>QA architecture</span><span>Test strategy and risk-based testing</span><span>Test suites from scratch</span><span>Smoke, sanity and regression</span><span>End-to-end, API and contract testing</span><span>Self-testing AI agents</span><span>Production browser agents</span><span>LLM evaluation and benchmarks</span><span>MCP integrations</span><span>Visual regression</span><span>Load and stress testing (JMeter)</span><span>Security and multi-tenant testing</span><span>Real-device mobile testing</span><span>Accessibility and UI/UX testing</span><span>CI/CD and release gates</span><span>Automated test reporting</span><span>Business analysis and scope definition</span><span>Client demos and presentations</span>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="sec-head">
+      <p class="label">Selected work</p>
+      <h2 id="work-h">Employers and clients</h2>
+    </div>
+
+    <div class="case">
+      <div class="meta"><span class="kind">Contract</span><span class="who">RefocusAI</span><span class="role">AI Automation Engineer</span><span class="when">Apr 2026 – present</span></div>
+      <div class="body">
+        <h3>Browser agents that produce rated insurance quotes</h3>
+        <p>RefocusAI, a San Diego insurtech, requotes policies across about 40 insurance carrier portals for independent agencies. Most carrier portals have no API, so AI agents log in, fill the full application, get a rated quote and check it.</p>
+        <ul>
+          <li>Built and hardened production quoting on 15+ carrier portals for auto and home, including GEICO, Safeco / Liberty Mutual, Mercury and Chubb: 1,848 commits and 260 merged pull requests in six months.</li>
+          <li>Scripts first, AI as fallback: Playwright page objects fill and read back every field, a Stagehand LLM step on AWS Bedrock handles the rest, and the Chrome DevTools Protocol reaches controls inside closed shadow DOM.</li>
+          <li>A quote review gate and accuracy audits that compare every coverage, term and deductible with the request. They caught premium errors of up to 2x and stopped unauthorised paid-report orders at three carriers.</li>
+          <li>Revived a carrier that had fallen from 159 quotes to zero, and built recovery that resumes a failed quote from its last completed step.</li>
+          <li>Reviewed 373 tickets for an AI "software factory" pilot, found only 18 of 108 ready for agents, and presented the findings to leadership.</li>
+        </ul>
+        <div class="stack"><span>TypeScript</span><span>Playwright</span><span>Stagehand</span><span>Chrome DevTools Protocol</span><span>AWS Bedrock</span><span>Vercel AI SDK</span><span>ECS / Step Functions</span><span>Docker</span></div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="meta"><span class="kind">Contract</span><span class="who">Qureos</span><span class="role">QA Automation Engineer</span><span class="when">Jun – Oct 2026</span></div>
+      <div class="body">
+        <h3>A QA system that tests itself, built from an empty repository</h3>
+        <p>Qureos is a Dubai-based, Prosus-backed AI hiring platform. I designed the QA architecture and an agentic testing system: AI agents read the code and ticket history, form claims about the product, verify each live and report the evidence.</p>
+        <ul>
+          <li>1,594 automated tests across API, contract and browser suites in four and a half months; about 33,000 executions a week.</li>
+          <li>Smoke on every push, a regression gate on every pull request, nightly runs, visual regression with Percy, production checks every six hours and over 1,200 automated reports to Slack.</li>
+          <li>685 bugs filed and 57 security findings raised; 6 top-priority production incidents raised before any customer reported them.</li>
+          <li>A canary that proves every run hits the real backend, after one unset setting had silently switched 178 handlers to mocks.</li>
+          <li>Five leadership reports on QA impact from 7,764 tickets, including a candid audit of my own suites.</li>
+        </ul>
+        <div class="stack"><span>Playwright</span><span>Percy</span><span>Claude + Superpowers</span><span>Cursor</span><span>MCP servers</span><span>GitHub Actions</span><span>Slack</span></div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="meta"><span class="kind">Full-time</span><span class="who">Ibcos Computers, UK</span><span class="role">Senior QA Automation Engineer, via Contour Software</span><span class="when">Jun 2023 – present</span></div>
+      <div class="body">
+        <h3>Quality engineering for financial and dealer software</h3>
+        <p>Ibcos, a Constellation Software company, makes the Gold dealer-management system used by 330+ agricultural, groundcare and construction machinery dealerships in the UK and Ireland.</p>
+        <ul>
+          <li>Smoke, regression and end-to-end suites for the new cloud accounts product, covering financial accuracy, tenant isolation, concurrency and accessibility, and AI invoice extraction checked against source documents.</li>
+          <li>An AI-driven development lifecycle toolkit with human approval gates for Claude, Codex, Copilot, Cursor and Kiro, connected to Jira and Confluence through MCP.</li>
+          <li>Mobile automation on real Android and iOS devices for the Gold Service and Gold Sales apps: 56 regression specs on BrowserStack.</li>
+          <li>Cypress suites for Gold Portal and a BDD API suite in C# for manufacturer integrations with AGCO, CNH and JCB.</li>
+        </ul>
+        <div class="stack"><span>Playwright</span><span>Cypress</span><span>WebdriverIO</span><span>Appium</span><span>BrowserStack</span><span>SpecFlow</span><span>Testcontainers</span></div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="meta"><span class="kind">Full-time</span><span class="who">Systems Limited</span><span class="role">QA Automation Engineer</span><span class="when">2020 – 2023</span></div>
+      <div class="body">
+        <h3>Commerce and mobile banking for major brands</h3>
+        <ul>
+          <li><b>Canada Goose</b>, NYSE/TSX-listed, e-commerce in 50+ markets: testing for the relaunch and revamp of its Salesforce Commerce Cloud storefront and site migration, with Stripe and Adyen payments, Riskified and Bazaarvoice. Suites in Cypress, then Playwright.</li>
+          <li><b>Easypaisa</b>, Pakistan's largest mobile wallet with 13M+ monthly users, and <b>UPaisa</b>: mobile apps and core banking, with a full mobile end-to-end suite on BrowserStack.</li>
+          <li><b>Khaadi</b>, one of Pakistan's largest fashion retailers: end-to-end testing from store to back office, and JMeter load testing at thousands of concurrent users.</li>
+          <li>Presented sprint demos to clients and turned their feedback into user stories; led QA hiring and mentoring.</li>
+        </ul>
+        <div class="stack"><span>Salesforce Commerce Cloud</span><span>Cypress</span><span>Playwright</span><span>JMeter</span><span>Postman</span><span>BrowserStack</span></div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="meta"><span class="kind">Contract</span><span class="who">ForthLogic</span><span class="role">Head of PMO and Service Assurance, Chatley AI</span><span class="when">2024 – present</span></div>
+      <div class="body">
+        <h3>Second person to join an AI voice-agent startup</h3>
+        <p>Chatley AI builds AI voice agents that answer business calls, book appointments and qualify leads. In a team that small I cover whatever the product needs.</p>
+        <ul>
+          <li>Run the development team, delivery and QA automation.</li>
+          <li>Own the customer side: demos, presentations, onboarding, support and retention.</li>
+          <li>Hiring from sourcing to interview, and earlier AI products: Foodie (calories and allergens from a photo) and Buzzbreach (a student networking site).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="meta"><span class="kind">Contract</span><span class="who">3DLogistiX</span><span class="role">QA Automation Consultant</span><span class="when">2025 · six months</span></div>
+      <div class="body">
+        <h3>QA for a 3D warehouse management system</h3>
+        <p>3DLogistiX, from Melbourne, runs warehouses through a 3D digital twin and a mobile app for picking and counts.</p>
+        <ul>
+          <li>Designed the QA architecture and set up the complete automation suite from scratch.</li>
+          <li>Tested the full inventory system, barcode-scanner flows and inventory counts, plus UI and UX on web and mobile.</li>
+          <li>Load and stress testing with JMeter at thousands of concurrent users.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="meta"><span class="kind">Contract</span><span class="who">AG1</span><span class="role">QA Automation Consultant</span><span class="when">2022 – 2024</span></div>
+      <div class="body">
+        <h3>Moving a subscription store from Kibo to Shopify</h3>
+        <ul>
+          <li>Tested the migration of drinkag1.com from Kibo to Shopify.</li>
+          <li>Automated end-to-end tests from the storefront through Shopify to order processing and fulfilment in NetSuite, plus the Klaviyo integration.</li>
+        </ul>
+        <div class="stack"><span>Shopify</span><span>Kibo</span><span>NetSuite</span><span>Klaviyo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" aria-labelledby="ap-h">
+    <div class="sec-head">
+      <p class="label">Approach</p>
+      <h2 id="ap-h">How I decide automation can be trusted</h2>
+    </div>
+    <div class="principles">
+      <div><h3>Scripts first, models last</h3><p>A deterministic step is cheaper and repeatable. I use a language model where a page is unknown or changes, and never to produce a figure nobody checks.</p></div>
+      <div><h3>Read back everything</h3><p>A field that was typed is not a field that was saved. Each value is read from the page, and from the network when it matters, before the next step runs.</p></div>
+      <div><h3>A passing test is not evidence</h3><p>I score from the system's own record of what happened, and add guards so a run that tested nothing can never pass.</p></div>
+      <div><h3>Show the client</h3><p>I demo after every iteration and turn what I hear into user stories. Most rework is a misunderstanding a demo would have caught.</p></div>
+    </div>
+  </section>
+
+  <section id="products" aria-labelledby="pr-h">
+    <div class="sec-head">
+      <p class="label">Own products</p>
+      <h2 id="pr-h">Products I designed and built</h2>
+      <p>Built AI-first: I set the product, architecture and tests, and work with Claude Code as a pair programmer.</p>
+    </div>
+
+    <div class="product">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>pitchlyy.com</span></div><img src="img/pitchlyy-home.png" alt="Pitchlyy home page: find local businesses and send each one a pitch that fits" loading="lazy" width="1440" height="900"></div>
+      <div class="text">
+        <span class="state">pitchlyy.com · live, pre-launch</span>
+        <h3>Pitchlyy</h3>
+        <p>AI outreach software. It finds local businesses, researches each website, writes a short email about the one gap the sender can fix, and sends from inboxes it sets up and warms.</p>
+        <ul>
+          <li>Multi-provider LLM router with fallback chains across six providers.</li>
+          <li>Resumable campaign worker with send windows by local time and country rules.</li>
+          <li>Self-hosted email verifier; about 1,300 automated tests.</li>
+        </ul>
+        <div class="stack"><span>Next.js</span><span>Supabase</span><span>Stripe</span><span>LLM routing</span></div>
+        <p><a href="https://pitchlyy.com" target="_blank" rel="noopener">Visit pitchlyy.com</a></p>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>ronaq-mu.vercel.app</span></div><img src="img/ronaq-home.png" alt="Ronaq home page: Shaadi, Mehndi, Birthday, Apki Ronaq, with a search for local event vendors" loading="lazy" width="1440" height="900"></div>
+      <div class="text">
+        <span class="state">deployed demo</span>
+        <h3>Ronaq</h3>
+        <p>An events marketplace for Pakistani celebrations, with separate sides for families, vendors and admins, built from a 15-page requirements document.</p>
+        <ul>
+          <li>Category-specific attributes that drive filters and vendor forms.</li>
+          <li>Event planner with checklists, budgets and reminders.</li>
+        </ul>
+        <div class="stack"><span>Next.js</span><span>Drizzle</span><span>Turso</span><span>react-three-fiber</span></div>
+        <p><a href="https://ronaq-mu.vercel.app" target="_blank" rel="noopener">Open the demo</a></p>
+      </div>
+    </div>
+
+    <div class="mini">
+      <div class="card"><h3>Kids Video Studio</h3><p class="state">runs locally, publishes on a schedule</p><p>An autonomous pipeline that writes children's songs, generates music on a local GPU, adds voice, aligns lyrics with Whisper, renders with Remotion and publishes to YouTube, halting on any mismatch.</p><div class="stack"><span>Remotion</span><span>Whisper</span><span>ACE-Step</span><span>YouTube API</span></div></div>
+      <div class="card"><h3>Ad generator</h3><p class="state">private</p><p>On-brand static ads from a brand's web address using free models, with a judge-and-rewrite loop and a rule-based gate that rejects unverified claims and grammar errors.</p><div class="stack"><span>Next.js</span><span>Satori</span><span>Ollama</span></div></div>
+    </div>
+  </section>
+
+  <section id="research" aria-labelledby="rs-h">
+    <div class="sec-head">
+      <p class="label">Research</p>
+      <h2 id="rs-h">How reliable are browser agents?</h2>
+      <p>webagent-bench runs the same insurance-quote tasks through four setups on five simulated portals, two of them held out, and scores each run from the portal's own record of what it received. Preliminary pilot results, for a paper in preparation:</p>
+    </div>
+    <div class="bench" role="group" aria-label="Preliminary benchmark results">
+      <div class="bars">
+        <div class="b"><span>Playwright script</span><div class="track"><div class="fill" style="width:95%"></div></div><span class="v">95%</span></div>
+        <div class="b"><span>Stagehand scripted</span><div class="track"><div class="fill" style="width:45%"></div></div><span class="v">45%</span></div>
+        <div class="b"><span>Stagehand agent</span><div class="track"><div class="fill" style="width:26%"></div></div><span class="v">26%</span></div>
+        <div class="b"><span>Browser Use</span><div class="track"><div class="fill" style="width:4%"></div></div><span class="v">0–4%</span></div>
+      </div>
+      <small>Correct-quote rate on development portals, baseline condition. Playwright n = 104. Under UI changes and injected faults, every setup drops sharply, which is the point of the study.</small>
+    </div>
+    <p style="margin-top:22px;max-width:44em;color:var(--muted)">My MS thesis built CAQI, a 20-indicator index for how well Scrum teams run their ceremonies. In a pilot on a live team's sprint artefacts, reviewers using it scored 14.25 against 11.25 for unguided reviewers (p = 0.004) in the same time.</p>
+  </section>
+
+  <section id="teaching" aria-labelledby="te-h">
+    <div class="sec-head">
+      <p class="label">Teaching</p>
+      <h2 id="te-h">AI Automation Mastery</h2>
+      <p>A ten-checkpoint program I teach at DevelopersHub Corporation, with four cohorts of about 500 learners each since 2025. It covers prompts and cost budgets, APIs and webhooks, n8n and agents with approval gates, self-hosted models, MCP, browser automation and production readiness, and ends with each student defending the architecture of a working project on demo day.</p>
+    </div>
+  </section>
+
+  <section id="history" aria-labelledby="hi-h">
+    <div class="sec-head">
+      <p class="label">History</p>
+      <h2 id="hi-h">Experience and education</h2>
+    </div>
+    <div class="timeline">
+      <div class="t"><span class="when">2023 – present</span><div><b>Contour Software</b> <span>· Senior QA Automation Engineer, embedded with Ibcos Computers, UK</span></div></div>
+      <div class="t"><span class="when">2020 – 2023</span><div><b>Systems Limited</b> <span>· QA Automation Engineer</span></div></div>
+      <div class="t"><span class="when">2017 – 2020</span><div><b>B Tech Group</b> <span>· Technical Recruiter, then Business Analyst and SQA Engineer, working US hours from its Islamabad office while studying</span></div></div>
+      <div class="t"><span class="when">2022 – present</span><div><b>Contract and consulting</b> <span>· RefocusAI, ForthLogic (Chatley AI), Qureos, 3DLogistiX, AG1</span></div></div>
+      <div class="t"><span class="when">MS · 2024 – 2026</span><div><b>Software Engineering, FAST-NUCES Islamabad</b></div></div>
+      <div class="t"><span class="when">BS · 2016 – 2020</span><div><b>Software Engineering, COMSATS University Islamabad</b></div></div>
+    </div>
+  </section>
+</div>
+
+<div class="contact" id="contact">
+  <div class="wrap">
+    <p class="label" style="color:inherit;opacity:.7">Contact</p>
+    <h2>Have something that needs to work when nobody is watching it?</h2>
+    <div class="rows">
+      <div><span class="k">Email</span><span class="v" id="email">agha.moiz6138@hotmail.com</span><button class="copy" id="copy-email" type="button" aria-live="polite">Copy</button></div>
+      <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/moeez-abdul-197931428" target="_blank" rel="noopener">linkedin.com/in/moeez-abdul-197931428</a></div>
+      <div><span class="k">GitHub</span><a href="https://github.com/moiz-1995" target="_blank" rel="noopener">github.com/moiz-1995</a></div>
+      <div><span class="k">Résumé</span><a href="Agha_Abdul_Moiz_Resume.pdf">Download PDF</a></div>
+      <div><span class="k">Based in</span><span>Rawalpindi, Pakistan · remote worldwide or relocation</span></div>
+    </div>
+  </div>
+</div>
+</main>
+
+<div class="wrap"><p class="foot">© 2026 Agha Abdul Moiz</p></div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var el = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+    var select = function () { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected'; };
+    try { navigator.clipboard.writeText(el.textContent).then(done, select); } catch (e) { select(); }
+  });
+})();
+</script>
+</body>
+</html>
