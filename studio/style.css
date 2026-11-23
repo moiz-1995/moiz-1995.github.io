@@ -1,0 +1,10 @@
+:root { --bg:#f2f4f7; --surface:#fff; --ink:#111a2e; --muted:#55607a; --line:#d5dae4; --accent:#2343c9; color-scheme:light; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0e1320; --surface:#161d2e; --ink:#e9edf6; --muted:#9aa5bd; --line:#2a3349; --accent:#93a6ff; color-scheme:dark; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 "IBM Plex Sans","Segoe UI",system-ui,sans-serif; }
+main { max-width:680px; margin:0 auto; padding:48px max(16px, env(safe-area-inset-right,0px)) 64px max(16px, env(safe-area-inset-left,0px)); }
+h1 { font:700 2rem/1.2 "Segoe UI",system-ui,sans-serif; margin:0 0 8px; }
+h2 { font-size:1.15rem; margin:32px 0 6px; }
+p, li { color:var(--ink); } .muted { color:var(--muted); font-size:.9rem; }
+a { color:var(--accent); }
+.card { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin-top:24px; }
